@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Isaiah Responsive Grid Lecture</title>
+    <!-- Tailwind (browser build): reads the classes in this file and generates the CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  </head>
+  <body class="bg-gray-100">
+
+    <!--1. Tailwind is MOBILE FIRST
+        2. A class with NO prefix applies to every screen 
+        display: grid -> grid
+        grid-template-columns: 1fr; -> grid-cols-1
+        grid-template-columns: repeat(2, 1fr) -> grid-cols-2
+        grid-template-columns: repeat(3, 1fr) -> grid-cols-3
+    -->
+
+    <!-- 
+        grid-cols-1 -> 1 column on phones max width rule of 450px below
+        min-[451px]:grid-cols-2 -> 2 columns from 451px and up until 800px
+        min-[801px]:grid-cols-4 -> 4 columns from 801px
+    -->
+
+    <main class="grid gap-6 grid-cols-1 min-[451px]:grid-cols-2 min-[801px]:grid-cols-4">
+        <!-- Any device width above 450px we will span 2 columns -->
+        <article class="min-[451px]:col-span-2 flex flex-col rounded-lg border border-black/20 bg-zinc-900 text-white">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/Kanna.png" alt="Kanna" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Kanna</h4>
+                        <p>Maple Story</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">In MapleStory, Kanna is a unique Magician class from the Sengoku job branch, originating from the Japanese-inspired region of Momijigaoka. She wields a fan as her main weapon and has a familiar (Haku) who supports her in battle.</h5>
+                <p>Kanna's skills focus heavily on crowd control, summoning spirits, and using Shikigami abilities to deal damage over wide areas, making her one of the best classes for mobbing. Her playstyle includes passive buffs that increase spawn rates and yield higher EXP, which makes her highly desirable for farming. Kanna also excels at supportive abilities like providing party members with extra mana and health regeneration. However, her reliance on mana and specific skill combos can make her more challenging to manage in long battles.</p>
+            </div>
+        </article>
+
+        <article class="flex flex-col rounded-lg border border-black/20 bg-amber-100">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/Pali.png" alt="Paladin" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Paladin</h4>
+                        <p>Maple Story</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">In MapleStory, the Paladin is a Warrior class within the Explorer branch</h5>
+                <p>Paladins use a one-handed sword, blunt weapon, or mace along with a shield, making them highly durable. They excel at reducing incoming damage and protecting themselves</p>
+            </div>
+        </article>
+
+        <article class="flex flex-col rounded-lg border border-black/20 bg-white">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/hayato.png" alt="Hayato" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Hayato</h4>
+                        <p>Maple Story</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">In MapleStory, Hayato is a Sengoku warrior from Momijigaoka.</h5>
+                <p>Hayato wields a Katana as his primary weapon, focusing on high-speed slashes, dashes, and chain attacks that target multiple enemies.</p>
+            </div>
+        </article>
+
+        <article class="min-[801px]:col-span-2 min-[451px]:col-span-2 flex flex-col rounded-lg border border-black/20 bg-blue-600 text-white">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/Buc.png" alt="Buc" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Buc</h4>
+                        <p>Maple Story</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">In MapleStory, the Buccaneer is a Pirate class under the Explorer branch, specializing in close-range melee combat. Buccaneers use knuckles as their primary weapon and channel their inner power through energy-based skills</h5>
+                <p>A unique aspect of Buccaneers is their "Energy Charge" mechanic, where each hit builds up energy that, when full, boosts their attack power and unlocks stronger abilities. Buccaneers are known for their high mobility, impressive burst damage, and transformation skills, which allow them to unleash powerful combos with a fluid, high-speed combat style.</p>
+            </div>
+        </article>
+
+        <article class="min-[801px]:col-start-4 min-[801px]:row-start-1 min-[801px]:row-span-2 flex flex-col rounded-lg border border-black/20 bg-white">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/glam.jpg" alt="Isaiah" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Isaiah Ferguson</h4>
+                        <p>Developer</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">Isaiah Ferguson is a versatile and detail-oriented developer</h5>
+                <p>Isaiah is a skilled mentor, sharing his knowledge in areas like web design and Unity development. He emphasizes structure, accessibility, and thoughtful design feedback for students, guiding them toward high standards in their work. Known for a friendly, joking tone, Isaiah creates a supportive learning environment. He's hands-on with emerging technologies, like .NET 8, and balances his professional interests with personal pursuits, including entrepreneurial ideas and fitness activities. Isaiah’s multifaceted approach to both coding and community-building sets him apart as a developer and mentor. He also has a black belt in the art of Brazilian Jiu-Jitsu and has been practicing Muay Thai for 15 years.</p>
+            </div>
+        </article>
+
+        <article class="min-[801px]:col-span-4 flex flex-col rounded-lg border border-black/20 bg-zinc-900 text-white">
+            <div class="p-6">
+                <div class="flex items-center mb-6">
+                    <img class="bg-white rounded-full" src="./Assets/Cannon.png" alt="Cannoneer" width="50" height="50">
+                    <div class="mx-4">
+                        <h4 class="text-2xl font-medium leading-tight">Cannoneer</h4>
+                        <p>Maple Story</p>
+                    </div>
+                </div>
+                <h5 class="text-xl font-medium leading-snug mb-6">In MapleStory, the Cannoneer is a Pirate class from the Explorer branch, known for its explosive, high-impact attacks and playful combat style. Cannoneers wield a hand cannon, which grants them long-range capabilities, and they partner with a companion monkey who supports in battle. This class excels at dealing damage across wide areas, making them particularly strong for mobbing and handling large groups of enemies.</h5>
+                <p class="mb-4">A distinctive aspect of the Cannoneer is its synergy with a loyal monkey companion, who aids in combat and offers supportive buffs. The Monkey Magic buff boosts essential stats, including HP, MP, and attack power, enhancing both the Cannoneer and any nearby party members, which makes the Cannoneer highly valued in group settings. For added survivability, Cannoneers also have Barrel Roulette, which can randomly grant helpful effects like increased attack speed or additional damage reduction.</p>
+                <p>With its combination of powerful AoE skills, self-sustaining abilities, and supportive party buffs, the Cannoneer is an all-around powerhouse that’s fun and accessible for beginners yet capable of high-level performance in both solo and team play. The Cannoneer’s gameplay is energetic and explosive, perfect for players who enjoy big, satisfying hits and a well-rounded combat experience.</p>
+            </div>
+        </article>
+
+    </main>
+  </body>
+</html>
